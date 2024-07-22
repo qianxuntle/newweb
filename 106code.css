@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.menu-item {
+    display: inline-block;
+    width: 44%;
+    margin: 10px 1%;
+    background-color: rgba(238, 238, 238, 0.5);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+.menu-item img {
+    width: 300px; /* 统一图片宽度 */
+    height: 200px; /* 统一图片高度 */
+    object-fit: cover; /* 确保图片被裁剪以填充整个区域 */
+}
+.menu-item h2 {
+    margin: 10px 0;
+    color: #333;
+}
+.menu-item p {
+    color: #666;
+}
+.navbar {
+    background-color: #333; /* 菜单栏背景颜色 */
+    overflow: hidden; /* 清除浮动 */
+}
+.navbar a {
+    float: left; /* 菜单项向左浮动 */
+    display: block;
+    color: white; /* 文字颜色 */
+    text-align: center;
+    padding: 14px 16px; /* 内边距 */
+    text-decoration: none; /* 去除下划线 */
+    border-radius: 5px; /* 添加圆角边框 */
+}
+.navbar a:hover {
+    background-color: #ddd; /* 鼠标悬停时背景颜色 */
+    color: black; /* 鼠标悬停时文字颜色 */
+}
+.team-intro {
+    background-color: #eee;
+    padding: 20px;
+    margin-top: 60px; /* 保持与导航栏顶部一致的距离 */
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px; /* 添加圆角边框 */
+}
+.team-intro p {
+    text-indent: 2em; /* 首行缩进 */
+}
+.team-intro p br {
+    display: block;
+    margin-top: 1em; /* 控制换行间距 */
+}
+.container, .navbar, .team-intro {
+    border-radius: 10px; /* 添加圆角边框 */
+}
+.member-info {
+    background-color: #909090; /* 菜单栏背景颜色 */
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* 添加一些间距 */
+    text-align: center;
+    color: #ffffff;
+}
