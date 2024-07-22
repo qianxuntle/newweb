@@ -55,7 +55,7 @@ body {
     background-color: #eee;
     padding: 20px;
     margin-top: 60px; /* 保持与导航栏顶部一致的距离 */
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     border-radius: 10px; /* 添加圆角边框 */
 }
