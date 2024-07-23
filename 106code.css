@@ -14,7 +14,7 @@ body {
 }
 .menu-item {
     display: inline-block;
-    width: 40%;
+    width: 42%;
     margin: 10px 1%;
     background-color: rgba(238, 238, 238, 0.5);
     padding: 20px;
@@ -55,7 +55,7 @@ body {
     background-color: #eee;
     padding: 20px;
     margin-top: 60px; /* 保持与导航栏顶部一致的距离 */
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     border-radius: 10px; /* 添加圆角边框 */
 }
@@ -77,3 +77,83 @@ body {
     text-align: center;
     color: #ffffff;
 }
+#yctjianjie{
+    width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border-radius: 10px;
+}
+.fanhuishouye {
+    width: 10%;
+    background-color: #565656;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    /* 其他样式... */
+}
+
+.fanhuishouye a {
+    color: #ffffff; /* 文字颜色 */
+    text-decoration: none; /* 确保这是针对a标签的样式，去除下划线 */
+    display: block; /* 使a标签填充整个容器 */
+    padding: 10px; /* 内边距 */
+    /* 其他样式，如字体大小、字体家族等... */
+}
+#windows-wrapper {
+    width: 90%; /* 容器宽度 */
+    margin: 0 auto; /* 居中包裹div */
+    height: 400px; /* 设置固定高度 */
+    overflow: hidden; /* 默认隐藏滚动条 */
+    background-color: #909090;
+    border-radius: 10px;
+}
+
+.window-container {
+    width: 100%; /* 容器宽度 */
+    text-align: center; /* 使窗口在水平方向上居中 */
+}
+
+.window {
+    width: 40%; /* 窗口宽度，留出间隙 */
+    display: inline-block; /* 使窗口作为内联块级元素显示 */
+    vertical-align: top; /* 确保窗口顶部对齐 */
+    margin: 1% 1% 0 1%; /* 设置顶部、右侧和左侧的外边距，底部外边距为0 */
+    padding: 15px; /* 内边距 */
+    background-color: #f0f0f0; /* 背景色 */
+    border: 1px solid #ddd; /* 边框样式 */
+    border-radius: 5px; /* 圆角边框 */
+}
+
+/* 为偶数窗口添加左侧外边距，以保持对齐 */
+.window:nth-child(even) {
+    margin-left: 0; /* 偶数窗口不需要左侧外边距 */
+}
+
+/* 窗口的高度可以自定义 */
+#window1 {
+    height: 100px;
+}
+
+/* ...更多窗口样式... */
+
+#windowN {
+    height: 120px;
+}
+
+/* 清除浮动，确保窗口容器可以正确包裹内容 */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 将清除浮动的类添加到窗口容器 */
+.window-container {
+    clear: both;
+}
+
+/* 其他样式保持不变 */
