@@ -5,24 +5,35 @@
     <meta charset="UTF-8">
     <title>吃饭选择器</title>
     <link rel="stylesheet" href="rice.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div id="quanbuyemian">
-        <div id="shanghang">
-            <div id="biaoti">
-                <h1>幸运转盘</h1>
-            </div>
-            <div id="jieshao">
-                如果你不知道吃什么的话你可以选择这个幸运转盘
-            </div>
+    <div class="qm">
+        <div class="headd">
+            <h2>吃饭选择器</h2>
         </div>
-        <div id="yuanpanyangshi1">
-        <div id="yuanpanyangshi2"></div>
+        <div class="jieshao">
+            如果你不知道吃什么，你可以选择这个选择器
         </div>
-        <div id="xiahang">
-            <div id="anniuyangshi" onclick="spinWheel()">run/stop</div>
+        <div class="xuanze">
+            请选择你想去的食堂
+            <select id="floorSelect" onchange="updateDishes()">
+                <option value="">请选择食堂</option>
+                <option value="一食堂">一食堂</option>
+                <option value="二食堂">二食堂</option>
+                <option value="三食堂">三食堂</option>
+                <option value="四食堂">四食堂</option>
+                <option value="我全都要">我全都要</option>
+            </select>
+        </div>
+        <div id="dishesDiv">
+            <!-- 菜品列表将在这里显示 -->
+        </div>
+        <div class="anniu">
+            <button onclick="selectRandomDish()">提交</button>
+        </div>
+        <div id="selectedDishesDiv">
+            <!-- 选中的菜品将在这里显示 -->
         </div>
     </div>
     <script src="rice.js"></script>
