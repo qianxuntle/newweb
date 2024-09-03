@@ -15,23 +15,19 @@ function updateDishes(floor) {
 
     // 生成菜品列表
     dishes.forEach(function (dish) {
-        var checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.value = dish;
-        checkbox.id = dish;
-        var label = document.createElement('label');
-        label.htmlFor = dish;
-        label.appendChild(document.createTextNode(dish));
-        dishesDiv.appendChild(checkbox);
-        dishesDiv.appendChild(label);
-        // dishesDiv.appendChild(document.createElement('br'));
+        var dishDiv = document.createElement('div');
+        dishDiv.textContent = dish;
+        dishDiv.className = 'dish-item';
+        dishDiv.onclick = function () {
+            this.classList.toggle('selected');
+        };
+        cpxs.appendChild(dishDiv);
     });
 }
 
 function selectRandomDish() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    var selectedDishes = Array.from(checkboxes).map(function (checkbox) {
-        return checkbox.value;
+    var selectedDishes = Array.from(document.querySelectorAll('.selected')).map(function (div) {
+        return div.textContent;
     });
 
     if (selectedDishes.length === 0) {
@@ -41,21 +37,17 @@ function selectRandomDish() {
 
     let intervalId; // 用于存储定时器的ID
 
-    function getRandomName() {
-        const randomIndex = Math.floor(Math.random() * selectedDishes.length); // 生成一个随机索引
-        return selectedDishes[randomIndex]; // 返回随机选中的名字
-    }
-
     function printRandomName() {
-        const nameDiv = document.getElementById('sjcm'); // 获取div元素
-        nameDiv.textContent = getRandomName(); // 设置div的文本内容为随机名字
+        const nameDiv = document.getElementById('sjcm');
+        const randomIndex = Math.floor(Math.random() * selectedDishes.length);
+        nameDiv.textContent = selectedDishes[randomIndex];
     }
 
     function startRandomDishTimer() {
-        printRandomName(); // 首先打印一个名字
-        intervalId = setInterval(printRandomName, 50); // 每0.05秒打印一个新的名字
+        printRandomName();
+        intervalId = setInterval(printRandomName, 50);
         setTimeout(() => {
-            clearInterval(intervalId); // 5秒后停止定时器
+            clearInterval(intervalId);
         }, 5000);
     }
 
@@ -63,23 +55,31 @@ function selectRandomDish() {
 }
 
 function selectAll() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    for (var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].checked = true;
-    }
+    var dishItems = document.querySelectorAll('.dish-item');
+    dishItems.forEach(function (item) {
+        item.classList.add('selected');
+    });
 }
 
 // 全不选的逻辑
 function deselectAll() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    for (var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].checked = false;
-    }
+    var dishItems = document.querySelectorAll('.dish-item');
+    dishItems.forEach(function (item) {
+        item.classList.remove('selected');
+    });
 }
 
 function fanselectAll() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    for (var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].checked = !checkboxes[i].checked;
-    }
+    var dishItems = document.querySelectorAll('.dish-item');
+    dishItems.forEach(function (item) {
+        item.classList.toggle('selected');
+    });
+}
+
+function enableScroll() {
+    document.getElementById('cpxs').style.overflow = 'auto';
+}
+
+function disableScroll() {
+    document.getElementById('cpxs').style.overflow = 'hidden';
 }

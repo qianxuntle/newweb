@@ -9,29 +9,33 @@
 </head>
 
 <body>
-    <div class="headd">
-        <h1>吃饭选择器</h1>
-    </div>
-    <div id="lcxz" >
-        <div id="yst" value="一食堂" onclick="updateDishes('一食堂')">一食堂</div>
-        <div class="erst" value="二食堂" onclick="updateDishes('二食堂')">二食堂</div>
-        <div class="sanst" value="三食堂" onclick="updateDishes('三食堂')">三食堂</div>
-        <div class="sist" value="四食堂" onclick="updateDishes('四食堂')">四食堂</div>
-        <div class="qx" value="全选" onclick="updateDishes('全选')">全选</div>
-    </div>
-    <div class="xcxs">
-        <div class="cbl">
-            <div class="cbxs">菜单显示</div>
-            <div id="cpxs">菜品将在这里显示</div>
-            <div class="anniubaozhuang">
-                <div class="qxanniu" onclick="selectAll()">全选</div>
-                <div class="noqxanniu" onclick="deselectAll()">不选</div>
-                <div class="fanx" onclick="fanselectAll()">反选</div>
-            </div>
+    <div class="qbys">
+        <div class="headd">
+            <h1>吃饭选择器</h1>
         </div>
-        <div class="ybys">
-            <div id="sjcm">最终菜名字</div>
-            <div class="tjanniu" onclick="selectRandomDish()"><b><i>提交</i></b></div>
+        <div id="lcxz">
+            <div id="yst" value="一食堂" onclick="updateDishes('一食堂')">一食堂</div>
+            <div class="erst" value="二食堂" onclick="updateDishes('二食堂')">二食堂</div>
+            <div class="sanst" value="三食堂" onclick="updateDishes('三食堂')">三食堂</div>
+            <div class="sist" value="四食堂" onclick="updateDishes('四食堂')">四食堂</div>
+            <div class="qx" value="全选" onclick="updateDishes('全选')">全选</div>
+        </div>
+        <div class="xcxs">
+            <div class="cbl">
+                <div class="cbxs">菜单显示</div>
+                <div id="cpxs" onmouseenter="enableScroll()" onmouseleave="disableScroll()">
+                    菜品将在这里显示
+                </div>
+                <div class="anniubaozhuang">
+                    <div class="qxanniu" onclick="selectAll()">全选</div>
+                    <div class="noqxanniu" onclick="deselectAll()">不选</div>
+                    <div class="fanx" onclick="fanselectAll()">反选</div>
+                </div>
+            </div>
+            <div class="ybys">
+                <div id="sjcm">最终菜名字</div>
+                <div class="tjanniu" onclick="selectRandomDish()"><b><i>提交</i></b></div>
+            </div>
         </div>
     </div>
     <script src="rice.js"></script>
