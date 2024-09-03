@@ -11,7 +11,7 @@ body {
     width: 90%;
     height: 90%;
     border: 3px solid black;
-    /* border-radius: 50%; */
+    border-radius: 20px; 
     transform: translate(-50%, -50%);
     overflow: hidden;
     top: 50%;
@@ -55,10 +55,44 @@ body {
 }
 
 .qm .anniu {
-    text-align: center;
     width: 100%;
     height: 5%;
     top: 46%;
+    position: absolute;
+}
+
+.qm .anniu .quanxuan{
+    text-align: center;
+    width: 8%;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.qm .anniu .noquanxuan{
+    text-align: center;
+    width: 10%;
+    border: 1px solid black;
+    border-radius: 10px;
+    left: 12%;
+    position: absolute;
+}
+
+.qm .anniu .fanxuan{
+    text-align: center;
+    width: 8%;
+    border: 1px solid black;
+    border-radius: 10px;
+    left: 26%;
+    position: absolute;
+}
+
+.qm .anniu .sbmit{
+    text-align: center;
+    width: 8%;
+    border: 1px solid black;
+    border-radius: 10px;
+    left: 90%;
     position: absolute;
 }
 

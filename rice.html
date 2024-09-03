@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>吃饭选择器</title>
     <link rel="stylesheet" href="rice.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -30,7 +31,10 @@
             <!-- 菜品列表将在这里显示 -->
         </div>
         <div class="anniu">
-            <button onclick="selectRandomDish()">提交</button>
+            <div class="quanxuan" onclick="selectAll()">全选</div>
+            <div class="noquanxuan" onclick="deselectAll()">全不选</div>
+            <div class="fanxuan" onclick="fanselectAll()">反选</div>
+            <div class="sbmit" onclick="selectRandomDish()">提交</div>
         </div>
         <div id="selectedDishesDiv">
             <!-- 选中的菜品将在这里显示 -->

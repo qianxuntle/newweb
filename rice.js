@@ -60,5 +60,28 @@ function selectRandomDish() {
             clearInterval(intervalId); // 5秒后停止定时器
         }, 5000);
     }
+
     startRandomDishTimer(); // 直接调用函数开始定时器
+}
+
+function selectAll() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = true;
+    }
+}
+
+// 全不选的逻辑
+function deselectAll() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = false;
+    }
+}
+
+function fanselectAll() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = !checkboxes[i].checked;
+    }
 }
