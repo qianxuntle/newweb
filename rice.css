@@ -1,107 +1,169 @@
-* {
-    margin: 0;
-    padding: 0;
+.headd {
+    border: 1px solid black;
+    text-align: center;
+    position: relative;
 }
 
-body {
-    background-color: aliceblue;
+#lcxz {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    position: relative;
 }
 
-.qm {
-    width: 90%;
-    height: 90%;
-    border: 3px solid black;
-    border-radius: 20px; 
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    position: absolute;
+#lcxz #yst {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px;
+    position: relative;
 }
 
-.qm .headd {
+#lcxz .erst {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 10px;
+    line-height: 100px;
+    text-align: center;
+}
+
+#lcxz .sanst {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 10px;
+    line-height: 100px;
+    text-align: center;
+}
+
+#lcxz .sist {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 10px;
+    line-height: 100px;
+    text-align: center;
+}
+
+#lcxz .qx {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 10px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.xcxs {
     background-color: aqua;
-    width: 100%;
-    height: 10%;
+    display: flex;
+    border: 1px solid black;
+}
+
+.xcxs .cbl {
+    width: 35%;
+    height: 400px;
+}
+
+.xcxs .cbl .cbxs {
     text-align: center;
+    width: 100%;
+}
+
+.xcxs .cbl #cpxs {
+    width: 100%;
+    height: 60%;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+}
+
+.xcxs .cbl .anniubaozhuang {
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.xcxs .cbl .qxanniu {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    background-color: white;
+}
+
+.xcxs .cbl .noqxanniu {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    background-color: white;
+}
+
+.xcxs .cbl .fanx {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    background-color: white;
+}
+
+.xcxs .ybys {
+    width: 60%;
+}
+
+.xcxs .ybys #sjcm {
+    border: 1px solid black;
+    height: 200px;
+    width: 90%;
+    border-radius: 10px;
     margin: auto;
-}
-
-.qm .jieshao {
-    width: 100%;
-    height: 10%;
     top: 10%;
-    border: 2px solid;
     text-align: center;
-    position: absolute;
-}
-
-.qm .xuanze {
-    text-align: center;
-    border: 1px solid black;
-    top: 20%;
-    width: 100%;
-    height: 5%;
-    position: absolute;
-}
-
-.qm #dishesDiv {
-    width: 100%;
-    height: 20%;
-    text-align: center;
-    top: 25%;
-    border: 1px solid black;
-    position: absolute;
-}
-
-.qm .anniu {
-    width: 100%;
-    height: 5%;
-    top: 46%;
-    position: absolute;
-}
-
-.qm .anniu .quanxuan{
-    text-align: center;
-    width: 8%;
-    border: 1px solid black;
-    border-radius: 10px;
-    position: absolute;
-}
-
-.qm .anniu .noquanxuan{
-    text-align: center;
-    width: 10%;
-    border: 1px solid black;
-    border-radius: 10px;
-    left: 12%;
-    position: absolute;
-}
-
-.qm .anniu .fanxuan{
-    text-align: center;
-    width: 8%;
-    border: 1px solid black;
-    border-radius: 10px;
-    left: 26%;
-    position: absolute;
-}
-
-.qm .anniu .sbmit{
-    text-align: center;
-    width: 8%;
-    border: 1px solid black;
-    border-radius: 10px;
-    left: 90%;
-    position: absolute;
-}
-
-.qm #selectedDishesDiv {
+    line-height: 200px;
     font-size: 40px;
-    text-align: center;
+    background-color: white;
+    position: relative;
+}
+
+.xcxs .ybys .tjanniu {
+    font-size: 30px;
+    margin: auto;
+    top: 20%;
     border: 1px solid black;
-    width: 100%;
-    height: 30%;
-    top: 51%;
-    position: absolute;
+    border-radius: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    line-height: 100px;
+    background-color: white;
+    position: relative;
 }

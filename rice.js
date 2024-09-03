@@ -3,14 +3,12 @@ var floors = {
     '二食堂': ['豆花饭', '卤肉饭', '炒饭', '麻辣烫'],
     '三食堂': ['未知'],
     '四食堂': ['未知'],
-    '我全都要': ['一食堂豆花饭', '一食堂炒饭', '套餐饭', '石锅饭', '一楼麻辣烫', '面', '一食堂卤肉饭', '二楼麻辣烫', '二食堂豆花饭', '二食堂卤肉饭', '二食堂炒饭', '二食堂麻辣烫', '未知']
+    '全选': ['一食堂豆花饭', '一食堂炒饭', '套餐饭', '石锅饭', '一楼麻辣烫', '面', '一食堂卤肉饭', '二楼麻辣烫', '二食堂豆花饭', '二食堂卤肉饭', '二食堂炒饭', '二食堂麻辣烫', '未知']
 };
 
-function updateDishes() {
-    var floorSelect = document.getElementById('floorSelect');
-    var dishesDiv = document.getElementById('dishesDiv');
-    var selectedFloor = floorSelect.value;
-    var dishes = floors[selectedFloor];
+function updateDishes(floor) {
+    var dishesDiv = document.getElementById('cpxs');
+    var dishes = floors[floor];
 
     // 清空之前的菜品
     dishesDiv.innerHTML = '';
@@ -49,7 +47,7 @@ function selectRandomDish() {
     }
 
     function printRandomName() {
-        const nameDiv = document.getElementById('selectedDishesDiv'); // 获取div元素
+        const nameDiv = document.getElementById('sjcm'); // 获取div元素
         nameDiv.textContent = getRandomName(); // 设置div的文本内容为随机名字
     }
 

@@ -9,35 +9,29 @@
 </head>
 
 <body>
-    <div class="qm">
-        <div class="headd">
-            <h2>吃饭选择器</h2>
+    <div class="headd">
+        <h1>吃饭选择器</h1>
+    </div>
+    <div id="lcxz" >
+        <div id="yst" value="一食堂" onclick="updateDishes('一食堂')">一食堂</div>
+        <div class="erst" value="二食堂" onclick="updateDishes('二食堂')">二食堂</div>
+        <div class="sanst" value="三食堂" onclick="updateDishes('三食堂')">三食堂</div>
+        <div class="sist" value="四食堂" onclick="updateDishes('四食堂')">四食堂</div>
+        <div class="qx" value="全选" onclick="updateDishes('全选')">全选</div>
+    </div>
+    <div class="xcxs">
+        <div class="cbl">
+            <div class="cbxs">菜单显示</div>
+            <div id="cpxs">菜品将在这里显示</div>
+            <div class="anniubaozhuang">
+                <div class="qxanniu" onclick="selectAll()">全选</div>
+                <div class="noqxanniu" onclick="deselectAll()">不选</div>
+                <div class="fanx" onclick="fanselectAll()">反选</div>
+            </div>
         </div>
-        <div class="jieshao">
-            如果你不知道吃什么，你可以选择这个选择器
-        </div>
-        <div class="xuanze">
-            请选择你想去的食堂
-            <select id="floorSelect" onchange="updateDishes()">
-                <option value="">请选择食堂</option>
-                <option value="一食堂">一食堂</option>
-                <option value="二食堂">二食堂</option>
-                <option value="三食堂">三食堂</option>
-                <option value="四食堂">四食堂</option>
-                <option value="我全都要">我全都要</option>
-            </select>
-        </div>
-        <div id="dishesDiv">
-            <!-- 菜品列表将在这里显示 -->
-        </div>
-        <div class="anniu">
-            <div class="quanxuan" onclick="selectAll()">全选</div>
-            <div class="noquanxuan" onclick="deselectAll()">全不选</div>
-            <div class="fanxuan" onclick="fanselectAll()">反选</div>
-            <div class="sbmit" onclick="selectRandomDish()">提交</div>
-        </div>
-        <div id="selectedDishesDiv">
-            <!-- 选中的菜品将在这里显示 -->
+        <div class="ybys">
+            <div id="sjcm">最终菜名字</div>
+            <div class="tjanniu" onclick="selectRandomDish()"><b><i>提交</i></b></div>
         </div>
     </div>
     <script src="rice.js"></script>
